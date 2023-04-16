@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CicekciBaciDapper.Models.TedarikcilerModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Yeni", "EY")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TedarikciAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ulke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sehir)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TedarikciAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ulke)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sehir)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "EY", new { id=item.TedarikciNo }) |
+            
+            @Html.ActionLink("Sil", "Delete", new { id = item.TedarikciNo })
+        </td>
+    </tr>
+}
+
+</table>
