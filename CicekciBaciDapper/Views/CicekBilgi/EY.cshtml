@@ -4,7 +4,7 @@
     ViewBag.Title = "EY";
 }
 
-<h2>EY</h2>
+<h2>Çiçek Bilgi</h2>
 
 
 @using (Html.BeginForm()) 
@@ -50,14 +50,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Kaydet" class="btn btn-success" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-info" })
 </div>
 
 @section Scripts {

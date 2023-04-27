@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Çiçek Bilgi</h2>
 
 <p>
-    @Html.ActionLink("Yeni", "EY")
+    @Html.ActionLink("Yeni", "EY", new { @class = "btn btn-success" })
 </p>
 <table class="table">
     <tr>
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.mensei)
         </td>
         <td>
-            @Html.ActionLink("Düzenle", "EY", new { id=item.cicekNo }) |
+            @Html.ActionLink("Düzenle", "EY", new { id=item.cicekNo }, new { @class = "btn btn-warning" }) |
             
-            @Html.ActionLink("sil", "Delete", new { id = item.cicekNo })
+            @Html.ActionLink("sil", "Delete", new { id = item.cicekNo }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

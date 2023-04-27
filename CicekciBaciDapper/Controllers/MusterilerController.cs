@@ -26,7 +26,7 @@ namespace CicekciBaciDapper.Controllers
             {
                 DynamicParameters param = new DynamicParameters();
                 param.Add("@MusteriNo", id);
-                return View(DP.ReturnList<MusterilerModel>("MusterilerSirala", param).FirstOrDefault<MusterilerModel>());
+                return View(DP.ReturnList<MusterilerModel>("MusteriSirala", param).FirstOrDefault<MusterilerModel>());
             }
         }
 
